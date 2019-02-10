@@ -2,10 +2,6 @@
 <title>kirakira</title>
 <script src="https://taisukef.github.io/egarjs/egarjs.js"></script>
 <script>"use strict"
-window.USE_CAMERA_FRONT = true
-var main = function(app) {
-	var state = 1
-	var img = null
 	
 	var img2 = new Image()
 	var img3 = new Image()
@@ -20,6 +16,10 @@ var main = function(app) {
 			var h = img2.height / img.width * 1000
 			g.drawImage(img2, 0, (1000 - h) / 2, 1000, h)
 			g.drawImage(img3,0,-500,1000-h,2000)
+window.USE_CAMERA_FRONT = true
+var main = function(app) {
+	var state = 1
+	var img = null	
 
 
 		} else if (state == 3) {
