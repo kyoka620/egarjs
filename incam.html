@@ -9,10 +9,6 @@ var main = function(app) {
 	app.loop = function(g, ts, dt, vw) {
 		if (state == 1) {  // タイトル
 		} else if (state == 2) {// 体の状態
-			g.setColor(255, 255, 255)
-			g.fillRect(50, 800, 900, 150)
-
-		} else if (state == 3) {
 			var h = img.height / img.width * 1000
 			g.drawImage(img, 0, (1000 - h) / 2, 1000, h)
 
@@ -27,10 +23,7 @@ var main = function(app) {
 			img = this.getCameraImage()
 			state = 2
 		} else if (state == 2) {
-			state = 3
-		} else if (state == 3) {
-			state = 1
-			img = null
+			document.location.href = "kakuninn.html"
 		}
 	}
 }
@@ -38,4 +31,3 @@ var main = function(app) {
 </head>
 <body><video id="video" playsinline></video></body>
 </html>
- <a href=kakuninn.html><img src="s.png" style="width: 100%;"></img></a>
