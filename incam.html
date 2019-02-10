@@ -12,6 +12,9 @@ var main = function(app) {
 	app.loop = function(g, ts, dt, vw) {
 		if (state == 1) {  // タイトル
 		} else if (state == 2) {// 体の状態
+			g.setColor(255, 255, 255)
+			g.fillRect(50, 800, 900, 150)
+			
 			var h = img2.height / img.width * 1000
 			g.drawImage(img2, 0, (1000 - h) / 2, 1000, h)
 
